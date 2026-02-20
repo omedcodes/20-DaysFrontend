@@ -47,7 +47,7 @@ const quizQuestions = [
     answers: [
       { text: "Java", correct: false },
       { text: "Python", correct: false },
-      { text: "Banana", correct: true },
+      { text: "HTML", correct: true },
       { text: "JavaScript", correct: false },
     ],
   },
@@ -61,3 +61,22 @@ const quizQuestions = [
     ],
   },
 ];
+
+let currentQuestionIndex = 0;
+let score = 0;
+let answersDisabled = false;
+
+totalQuestionsSpan.textContent = quizQuestions.length;
+maxScoreSpan.textContent = quizQuestions.length;
+
+// event listeners
+startButton.addEventListener("click", startQuiz);
+restartButton.addEventListener("click", restartQuiz);
+
+function startQuiz() {
+  console.log("Implement later");
+}
+
+function startQuiz() {
+  console.log("Implement later");
+}
