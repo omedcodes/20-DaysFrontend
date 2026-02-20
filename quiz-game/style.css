@@ -92,3 +92,19 @@ body {
   border-color: #ffbdbd;
   color: #dc3545;
 }
+
+.progress-bar {
+  height: 10px;
+  background-color: #f8f0e5;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress {
+  height: 100px;
+  background-color: #337be8;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
