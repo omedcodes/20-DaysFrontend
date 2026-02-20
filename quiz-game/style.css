@@ -152,3 +152,27 @@ button {
 button:hover {
   background-color: #1a4bd0;
 }
+
+/* implement media queries for responsiveness on smaller screens */
+@media (max-width: 500px) {
+  .screen {
+    padding: 1rem;
+  }
+
+  #start-screen h1 {
+    font-size: 2rem;
+  }
+
+  #question-text {
+    font-size: 1.3rem;
+  }
+
+  .answer-btn {
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
