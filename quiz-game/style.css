@@ -5,13 +5,13 @@
 }
 
 body {
-  background-color: #f5efe6;
+  background: #f5efe6;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 1rem;
-  font-family: "Segoe UI", sans-serif;
+  font-family: sans-serif;
 }
 
 .container {
@@ -35,7 +35,7 @@ body {
 }
 
 #start-screen h1 {
-  color: #1a69d0;
+  color: #3378e8;
   margin-bottom: 20px;
   font-size: 2.5rem;
 }
@@ -47,7 +47,7 @@ body {
 }
 
 .quiz-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #question-text {
@@ -74,7 +74,7 @@ body {
 .answer-btn {
   background-color: #f8f0e5;
   color: #333;
-  border: 2px solid #1a69d0;
+  border: 2px solid #bbc9f1;
   border-radius: 10px;
   padding: 1rem;
   cursor: pointer;
@@ -83,8 +83,8 @@ body {
 }
 
 .answer-btn:hover {
-  background-color: #c8cbea;
-  border-color: #1a4bd0;
+  background-color: #c8d1ea;
+  border-color: #9c9cd6;
 }
 
 .answer-btn.correct {
@@ -94,7 +94,7 @@ body {
 }
 
 .answer-btn.incorrect {
-  background-color: #e6fff0;
+  background-color: #fff0f0;
   border-color: #ffbdbd;
   color: #dc3545;
 }
@@ -108,14 +108,14 @@ body {
 }
 
 .progress {
-  height: 100px;
-  background-color: #337be8;
+  height: 100%;
+  background-color: #e86a33;
   width: 0%;
   transition: width 0.3s ease;
 }
 
 #result-screen h1 {
-  color: #1a4bd0;
+  color: #e86a33;
   margin-bottom: 30px;
 }
 
@@ -135,11 +135,11 @@ body {
 #result-message {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1a69d0;
+  color: #e86a33;
 }
 
 button {
-  background-color: #1a69d0;
+  background-color: #e86a33;
   color: white;
   border: none;
   border-radius: 10px;
@@ -150,7 +150,7 @@ button {
 }
 
 button:hover {
-  background-color: #1a4bd0;
+  background-color: #d45b28;
 }
 
 /* implement media queries for responsiveness on smaller screens */
