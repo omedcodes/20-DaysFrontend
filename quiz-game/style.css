@@ -40,6 +40,12 @@ body {
   font-size: 2.5rem;
 }
 
+#start-screen p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
 .quiz-header {
   margin-bottom: 2rem;
 }
@@ -108,3 +114,41 @@ body {
   transition: width 0.3s ease;
 }
 
+#result-screen h1 {
+  color: #1a4bd0;
+  margin-bottom: 30px;
+}
+
+.result-info {
+  background-color: #f8f0e5;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.result-info p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#result-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a69d0;
+}
+
+button {
+  background-color: #1a69d0;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1a4bd0;
+}
