@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="container">
-
         <div class="screen active" id="start-screen">
             <h1>Quiz Time!</h1>
             <p>Test your knowledge with these fun questions</p>
@@ -18,9 +17,24 @@
         <div class="screen" id="quiz-screen">
             <div class="quiz-header">
                 <h2 id="question-text">Question here</h2>
-            </div>
-        </div>
+                <div class="quiz-info">
+                    <p>
+                        Question <span id="current-question">1</span> of <span>5</span>
+                    </p>
 
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+            </div>
+
+            <div id="answers-container" class="answers-container">
+                <!-- Answer buttons will be inserted dynamically from JavaScript -->
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+
+        </div>
     </div>
 </body>
 </html>
