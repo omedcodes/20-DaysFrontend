@@ -1,6 +1,6 @@
 // DOM Elements
-const startScreen = document.querySelector("#start-screen");
-const quizScreen = document.querySelector("#quiz-screen");
+const startScreen = document.getElementById("start-screen");
+const quizScreen = document.getElementById("quiz-screen");
 const resultScreen = document.getElementById("result-screen");
 const startButton = document.getElementById("start-btn");
 const questionText = document.getElementById("question-text");
@@ -74,9 +74,10 @@ startButton.addEventListener("click", startQuiz);
 restartButton.addEventListener("click", restartQuiz);
 
 function startQuiz() {
+  // reset vars
   currentQuestionIndex = 0;
   score = 0;
-  scoreSpan.textContent = score;
+  scoreSpan.textContent = 0;
 
   startScreen.classList.remove("active");
   quizScreen.classList.add("active");
@@ -89,6 +90,7 @@ function showQuestion() {
   answersDisabled = false;
 
   const currentQuestion = quizQuestions[currentQuestionIndex];
+
   currentQuestionSpan.textContent = currentQuestionIndex + 1;
 
   const progressPercent = (currentQuestionIndex / quizQuestions.length) * 100;
@@ -101,12 +103,13 @@ function showQuestion() {
   currentQuestion.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.textContent = answer.text;
-    button.classList.add("answer-button");
+    button.classList.add("answer-btn");
 
-    // A dataset is a property of the button element that allows you to store custom data
+    // the dataset is a property of the button element that allows you to store custom data
     button.dataset.correct = answer.correct;
 
     button.addEventListener("click", selectAnswer);
+
     answersContainer.appendChild(button);
   });
 }
@@ -119,8 +122,9 @@ function selectAnswer(event) {
   const selectedButton = event.target;
   const isCorrect = selectedButton.dataset.correct === "true";
 
+  // Here Array.from() is used to convert the NodeList returned by answersContainer.children into an array, this is because the NodeList is not an array and we need to use the forEach method
   Array.from(answersContainer.children).forEach((button) => {
-    if (button.dataset.correct) {
+    if (button.dataset.correct === "true") {
       button.classList.add("correct");
     } else if (button === selectedButton) {
       button.classList.add("incorrect");
@@ -132,11 +136,10 @@ function selectAnswer(event) {
     scoreSpan.textContent = score;
   }
 
-  // delay 1s
   setTimeout(() => {
     currentQuestionIndex++;
 
-    // check if there are more questions or if the quiz ended
+    // check if there are more questions or if the quiz is over
     if (currentQuestionIndex < quizQuestions.length) {
       showQuestion();
     } else {
