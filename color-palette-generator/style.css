@@ -80,7 +80,7 @@ h1::after {
 }
 
 .color-box:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .color {
@@ -89,10 +89,31 @@ h1::after {
 }
 
 .color-info {
-    background-color: #fff;
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 0.9rem;
+  background-color: #fff;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.hex-value {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.copy-btn {
+  cursor: pointer;
+  color: #64748b;
+  transition: color 0.3s ease;
+}
+
+.copy-btn:hover {
+  color: #667eea;
+}
+
+@media (max-width: 768px) {
+  .palette-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
 }
